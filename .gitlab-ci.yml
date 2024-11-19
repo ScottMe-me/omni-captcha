@@ -20,14 +20,14 @@ workflow:
 
 test:
   extends: .test
-  image: elixir:$IMAGE-alpine
+  image: $IMAGE
   script:
     - mix test --cover
   parallel:
     matrix:
-      - IMAGE: 1.17
-      - IMAGE: 1.16
-      - IMAGE: 1.15
+      - IMAGE: elixir:1.17-alpine
+      - IMAGE: elixir:1.16-alpine
+      - IMAGE: elixir:1.15-alpine
 
 format:
   extends: .test
