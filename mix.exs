@@ -32,8 +32,7 @@ defmodule OmniCaptcha.Mixfile do
 
   defp description do
     """
-    A simple Captcha package for Elixir applications, provides verification
-    and templates for rendering forms with the reCAPTCHA, hCaptcha, and Cloudflare Turnstile widgets
+    A simple Captcha package for Elixir applications, provides verification and templates for rendering forms with the reCAPTCHA, hCaptcha, and Cloudflare Turnstile widgets
     """
   end
 
@@ -83,7 +82,14 @@ defmodule OmniCaptcha.Mixfile do
 
   defp package do
     [
-      files: ["lib", "mix.exs", "README.md", "LICENSE", "VERSION"],
+      files: [
+        "lib",
+        "mix.exs",
+        "README*",
+        "LICENSE*",
+        "VERSION",
+        ".formatter.exs"
+      ],
       maintainers: ["Scott"],
       licenses: ["MIT"],
       links: %{

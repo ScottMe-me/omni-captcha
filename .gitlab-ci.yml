@@ -1,16 +1,48 @@
 stages:
   - test
+  - docs
 
-test:
-  image: $IMAGE
+default:
+  image: elixir:1.17-alpine
+
+variables:
+  MIX_HOME: $CI_PROJECT_DIR/.mix
+
+workflow:
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+
+.test:
   stage: test
   before_script:
     - mix do local.hex --force, local.rebar --force, deps.get --force
+
+test:
+  extends: .test
+  image: elixir:$IMAGE-alpine
   script:
     - mix test --cover
   parallel:
     matrix:
-      - IMAGE: elixir:1.17-alpine
-      - IMAGE: elixir:1.16-alpine
-      - IMAGE: elixir:1.15-alpine
-      - IMAGE: elixir:1.14-alpine
+      - IMAGE: 1.17
+      - IMAGE: 1.16
+      - IMAGE: 1.15
+
+format:
+  extends: .test
+  variables:
+    MIX_ENV: "test"
+  coverage: /\d+.\d+\%\s+\|\s+Total/
+  script:
+    - mix test --cover
+
+docs:
+  stage: docs
+  script:
+    - mix do deps.get, docs
+    - mv doc/ public/
+  pages: true
+  artifacts:
+    paths:
+      - public
