@@ -16,6 +16,12 @@ workflow:
 
 .test:
   stage: test
+  cache:
+    - key:
+        files:
+          - mix.lock
+      paths:
+        - deps
   before_script:
     - mix do local.hex --force, local.rebar --force, deps.get --force
 
@@ -53,5 +59,7 @@ hex:publish:
   when: manual
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+  before_script:
+    - mix do local.hex --force, local.rebar --force, deps.get --force
   script:
     - mix hex.publish --yes
