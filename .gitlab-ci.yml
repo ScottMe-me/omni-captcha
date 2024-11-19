@@ -1,6 +1,7 @@
 stages:
   - test
   - docs
+  - publish
 
 default:
   image: elixir:1.17-alpine
@@ -46,3 +47,11 @@ docs:
   artifacts:
     paths:
       - public
+
+hex:publish:
+  stage: publish
+  when: manual
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+  script:
+    - mix hex.publish --yes

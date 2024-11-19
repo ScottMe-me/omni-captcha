@@ -7,8 +7,8 @@ defmodule OmniCaptcha.Mixfile do
     [
       app: :omni_captcha,
       compilers: Mix.compilers(),
-      name: "omni captcha",
-      source_url: "",
+      name: "Omni Captcha",
+      source_url: "https://gitlab.com/scott-codes-things/omni-captcha",
       version: @version,
       elixir: "~> 1.13",
       description: description(),
