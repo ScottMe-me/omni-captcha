@@ -1,0 +1,9 @@
+/_build
+erl_crash.dump
+/deps
+/doc
+/cover
+
+# Ignore dialyzer files
+/priv/plts/*.plt
+/priv/plts/*.plt.hash
