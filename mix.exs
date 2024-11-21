@@ -61,7 +61,7 @@ defmodule OmniCaptcha.Mixfile do
       extras: ["README.md"],
       groups_for_modules: groups_for_modules(),
       main: "readme",
-      source_ref: "v#{@version}"
+      source_ref: "master"
     ]
   end
 

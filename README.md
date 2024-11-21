@@ -1,5 +1,11 @@
 # OmniCaptcha
 
+![Hex.pm Version](https://img.shields.io/hexpm/v/omni_captcha)
+[![pipeline
+status](https://gitlab.com/scott-codes-things/omni-captcha/badges/master/pipeline.svg)](https://gitlab.com/scott-codes-things/omni-captcha/-/commits/master)
+[![coverage
+report](https://gitlab.com/scott-codes-things/omni-captcha/badges/master/coverage.svg)](https://gitlab.com/scott-codes-things/omni-captcha/-/commits/master)
+
 The package is fork of the [hcaptcha] package that has been modified to be adaptable.
 
 [hcaptcha]: https://github.com/sebastiangrebe/hcaptcha
@@ -15,7 +21,7 @@ The repo works for me but is not tested that all configuration options or callba
 ```elixir
   defp deps do
     [
-      {:omni_captcha, "~> 0.0.1"},
+      {:omni_captcha, "~> 0.0.2"},
     ]
   end
 ```
