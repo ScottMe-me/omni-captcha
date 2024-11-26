@@ -1,10 +1,10 @@
 # OmniCaptcha
 
 ![Hex.pm Version](https://img.shields.io/hexpm/v/omni_captcha)
+[![Documentation](https://img.shields.io/badge/documentation-gray)](https://hexdocs.pm/omni_captcha)
 [![pipeline
 status](https://gitlab.com/scott-codes-things/omni-captcha/badges/master/pipeline.svg)](https://gitlab.com/scott-codes-things/omni-captcha/-/commits/master)
-[![coverage
-report](https://gitlab.com/scott-codes-things/omni-captcha/badges/master/coverage.svg)](https://gitlab.com/scott-codes-things/omni-captcha/-/commits/master)
+[![coverage report](https://gitlab.com/scott-codes-things/omni-captcha/badges/master/coverage.svg)](https://gitlab.com/scott-codes-things/omni-captcha/-/commits/master)
 
 The package is fork of the [hcaptcha] package that has been modified to be adaptable.
 
