@@ -92,7 +92,8 @@ defmodule OmniCaptcha.Mixfile do
       maintainers: ["Scott"],
       licenses: ["MIT"],
       links: %{
-        "GitLab" => "https://gitlab.com/scott-codes-things/omni-captcha"
+        "GitLab" => "https://gitlab.com/scott-codes-things/omni-captcha",
+        "Forked" => "https://github.com/sebastiangrebe/hcaptcha"
       }
     ]
   end
