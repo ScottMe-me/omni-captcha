@@ -21,7 +21,7 @@ The repo works for me but is not tested that all configuration options or callba
 ```elixir
   defp deps do
     [
-      {:omni_captcha, "~> 0.0.2"},
+      {:omni_captcha, "~> 0.0.3"},
     ]
   end
 ```
@@ -51,7 +51,7 @@ By default the public and private keys are loaded via the `OMNI_CAPTCHA_PUBLIC_K
 
 ```elixir
   config :omni_captcha,
-    adapter: OmniCaptcha.Adapter.Turnstile
+    adapter: OmniCaptcha.Adapter.Turnstile,
     site_key: System.fetch_env!("OMNI_CAPTCHA_SITE_KEY"),
     secret_key: System.fetch_env!("OMNI_CAPTCHA_SECRET_KEY")
 ```

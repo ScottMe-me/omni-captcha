@@ -27,7 +27,7 @@ defmodule OmniCaptcha.Mixfile do
   end
 
   def application do
-    [extra_applications: [:logger, :eex, :httpoison]]
+    [extra_applications: [:logger, :eex]]
   end
 
   defp description do
@@ -42,7 +42,6 @@ defmodule OmniCaptcha.Mixfile do
       {:credo, "~> 1.0", only: [:dev, :test], runtime: false},
       {:dialyxir, "~> 1.3", only: [:dev], runtime: false},
       {:ex_doc, "~> 0.27", only: [:dev], runtime: false},
-      {:httpoison, "~> 2.0", optional: true},
       {:jason, "~> 1.4"},
       {:mint, "~> 1.5"},
       {:phoenix_live_view, "~> 0.19"},
