@@ -21,7 +21,7 @@ The repo works for me but is not tested that all configuration options or callba
 ```elixir
   defp deps do
     [
-      {:omni_captcha, "~> 0.0.3"},
+      {:omni_captcha, "~> 0.0.4"},
     ]
   end
 ```
