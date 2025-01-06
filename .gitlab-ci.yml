@@ -4,7 +4,7 @@ stages:
   - publish
 
 default:
-  image: elixir:1.17-alpine
+  image: elixir:1.18-alpine
 
 variables:
   MIX_HOME: $CI_PROJECT_DIR/.mix
@@ -30,19 +30,25 @@ test:
   image: $IMAGE
   script:
     - mix test --cover
+  variables:
+    MIX_ENV: "test"
   parallel:
     matrix:
+      - IMAGE: elixir:1.18-alpine
       - IMAGE: elixir:1.17-alpine
       - IMAGE: elixir:1.16-alpine
       - IMAGE: elixir:1.15-alpine
 
 format:
   extends: .test
-  variables:
-    MIX_ENV: "test"
   coverage: /\d+.\d+\%\s+\|\s+Total/
   script:
     - mix test --cover
+
+dialyzer:
+  extends: .test
+  script:
+    - mix dialyzer
 
 docs:
   stage: docs

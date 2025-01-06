@@ -44,7 +44,7 @@ defmodule OmniCaptcha.Mixfile do
       {:ex_doc, "~> 0.27", only: [:dev], runtime: false},
       {:jason, "~> 1.4"},
       {:mint, "~> 1.5"},
-      {:phoenix_live_view, "~> 0.19"},
+      {:phoenix_live_view, "~> 1.0"},
       {:tesla, "~> 1.8"}
     ]
   end
@@ -93,6 +93,7 @@ defmodule OmniCaptcha.Mixfile do
       licenses: ["MIT"],
       links: %{
         "GitLab" => "https://gitlab.com/scott-codes-things/omni-captcha",
+        "GitHub (mirror)" => "https://github.com/ScottMe-me/omni-captcha",
         "Forked" => "https://github.com/sebastiangrebe/hcaptcha"
       }
     ]
